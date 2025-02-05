@@ -24,9 +24,22 @@
     },
     "version": "2"
   },
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    "source.organizeImports.biome": true
+  },
+  "formatter": {
+    "language_server": {
+      "name": "biome"
+    }
+  },
   "languages": {
     "Python": {
-      "language_servers": ["ruff", "pyright", "!pylsp"],
+      "language_servers": [
+        "ruff",
+        "pyright",
+        "!pylsp"
+      ],
       "format_on_save": "on",
       "formatter": [
         {
@@ -41,6 +54,13 @@
           }
         }
       ]
+    }
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
     }
   }
 }
